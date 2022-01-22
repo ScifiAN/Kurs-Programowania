@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Contact Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Oswald:wght@700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="challengestyles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <main>
+      <form action="/" method="GET">
+        <section>
+          <h2>How can we help you?</h2>
+          <ul>
+            <li>
+              <label for="user-name">Your Name</label>
+              <input type="text" name="username" id="user-name" required />
+            </li>
+            <li>
+              <label for="user-email">Your E-mail address</label>
+              <input type="email" name="useremail" id="user-email" required />
+            </li>
+            <li>
+              <label for="user-phone-number">Your Phone Number</label>
+              <input
+                type="number"
+                name="userphonenumber"
+                id="user-phone-number"
+                required
+                min="9"
+              />
+            </li>
+            <li>
+              <label for="user-message">Your Message</label>
+              <textarea
+                name="usermessage"
+                id="user-message"
+                rows="8"
+                required
+              ></textarea>
+            </li>
+            <li>
+              <label for="user-find">How did you find us?</label>
+              <select name="userfind" id="user-find" required>
+                <option value="Web Search">Web Search</option>
+                <option value="Friend Recommendation">
+                  Friend Recommendation
+                </option>
+                <option value="Advertisement">Advertisement</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>How should we reply?</h2>
+          <ul>
+            <li class="reply">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-call"
+                value="call"
+                required
+              />
+              <label for="verify-call">Call me</label>
+            </li>
+            <li class="reply">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-email"
+                value="email"
+                required
+              />
+              <label for="verify-email">Send me an email</label>
+            </li>
+            <li class="reply">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-dont"
+                value="dont"
+                required
+              />
+              <label for="verify-dont">Don't reply</label>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <div class="reply">
+            <input type="checkbox" id="agree-terms" name="terms" required />
+            <label for="agree-terms">Accept Terms</label>
+          </div>
+        </section>
+        <section id="buttons">
+          <button type="reset" id="clear">Clear</button>
+          <button type="submit">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
