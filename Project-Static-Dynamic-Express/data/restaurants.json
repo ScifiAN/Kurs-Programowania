@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Death king",
+        "address": "Awalon 3/43",
+        "cuisine": "Magic",
+        "website": "https://magic.com",
+        "description": "It's awesome"
+    },
+    {
+        "name": "Pierogi",
+        "address": "Lubecka 12/23",
+        "cuisine": "Polish",
+        "website": "https://pierogi.com",
+        "description": "It's pierogi. "
+    },
+    {
+        "name": "Buricano",
+        "address": "Santa 34/3",
+        "cuisine": "Mexican",
+        "website": "https://santa.com",
+        "description": "It's unforgetable"
+    }
+]
