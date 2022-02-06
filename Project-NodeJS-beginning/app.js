@@ -45,7 +45,7 @@ app.get('/users', function(req, res){ // this part is not activating
 
     responseData += '</ul>';
 
-    res.send(existingUsers);
+    res.send(responseData);
 });
 
 app.listen(3000);
