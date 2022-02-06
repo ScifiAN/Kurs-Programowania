@@ -12,10 +12,10 @@
   <main>
     <h1>Recommended restaurants</h1>
     <% if (numberOfRestaurants === 0) { %>
-      <p>Unfortunatelly, we have no restaurants yet - maybe start recommending some?</p> <!-- to mi nie działa(zmiana tekstu) -->
+      <p>Unfortunatelly, we have no restaurants yet - maybe start recommending some?</p> 
     <% } else { %>
       <p>Find your next favorite restaurants with help of our other users!</p>
-      <p>We found <%= numberOfRestaurants %> restaurants. </p> <!-- to mi nie działa(licznie restauracji) -->
+      <p>We found <%= numberOfRestaurants %> restaurants. </p>
       <ul id="restaurants-list">
       <% for (const restaurant of restaurants) { %>
         <%- include('includes/restaurants/restaurant-item', {restaurant: restaurant}) %>        
