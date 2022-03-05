@@ -17,8 +17,6 @@ router.get('/discussion', async function (req, res) {
 
   const query = `SELECT * FROM comments ${filter}`;
 
-  console.log(query);
-
   const [comments] = await db.query(query, [req.query.author]);
 
   res.render('discussion', { comments: comments });

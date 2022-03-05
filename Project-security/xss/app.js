@@ -16,7 +16,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(discussionRoutes);
 
 app.use(function(error, req, res, next) {
-  console.log(error);
   res.render('500');
 })
 
