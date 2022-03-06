@@ -48,12 +48,12 @@ router.post('/signup', async function (req, res) {
   const enteredPassword = userData.password;
 
   if (
-    !enteredEmail || 
-    !enteredConfirmEmail || 
-    !enteredPassword || 
-    enteredPassword.trim() < 6 || 
-    enteredEmail !== enteredConfirmEmail || 
-    !enteredEmail.includes('@')
+    !enteredEmail
+    || !enteredConfirmEmail
+    || !enteredPassword
+    || enteredPassword.trim() < 6
+    || enteredEmail !== enteredConfirmEmail
+    || !enteredEmail.includes('@')
     ){
       req.session.inputData = {
         hasError: true,
