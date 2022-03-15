@@ -1,0 +1,1 @@
+// Name, summary, price, image, description
