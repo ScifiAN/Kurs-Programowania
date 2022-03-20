@@ -9,8 +9,8 @@
     <% } %>
 
     <% if (locals.isAdmin) { %>
-        <li><a href="/admin/products">Manage Products</a></li>
-        <li><a href="/admin/orders">Manage Orders</a></li>
+        <li><a href="/admin/products/products-admin">Manage Products</a></li>
+        <li><a href="/admin/products/orders-all">Manage Orders</a></li>
     <% } %>
 
     <% if (!locals.isAuth) { %>
@@ -19,7 +19,6 @@
     <% } %>
 
     <% if (locals.isAuth) { %>
-        <!-- <li><a href="/admin"></a>Admin</li> -->
         <li>
             <form action="/logout" method="POST">
                 <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
