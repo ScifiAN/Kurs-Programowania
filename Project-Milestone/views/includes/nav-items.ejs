@@ -1,7 +1,7 @@
 <ul class="nav-items">
     <% if (!locals.isAdmin) { %>
         <li><a href="/">Shop</a></li>
-        <li><a href="/cart">Cart</a></li>
+        <li><a href="/cart">Cart <span class="badge"><%= locals.cart.totalQuantity %> </span></a></li>
     <% } %>
 
     <% if (locals.isAuth && !locals.isAdmin) { %>
@@ -9,7 +9,7 @@
     <% } %>
 
     <% if (locals.isAdmin) { %>
-        <li><a href="/admin/products/products-admin">Manage Products</a></li>
+        <li><a href="/admin/products-all">Manage Products</a></li>
         <li><a href="/admin/products/orders-all">Manage Orders</a></li>
     <% } %>
 

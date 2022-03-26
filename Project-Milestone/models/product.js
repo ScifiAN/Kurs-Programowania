@@ -10,15 +10,16 @@ class Product {
         this.image = productData.image; //the name of the img file
         this.updateImageData();
         if (productData._id){
-            this.id = productData._id.toString();
+            this.id = productData._id.toString().trim();
         }
     }
 
     static async findById (productId){
         let prodId
-        try {
+        if (mongodb.ObjectId.isValid(productId)){
             prodId = new mongodb.ObjectId(productId);
-        } catch (error){
+        } else {
+            const error = new Error('Incorrect product id.')
             error.code = 404;
             throw error;
         }
@@ -37,6 +38,22 @@ class Product {
 
         return products.map(function(productDocument){
             return new Product(productDocument);
+        });
+    }
+
+    static async findMultiple(ids) {
+        const productIds = ids.map(function(id) {
+          return new mongodb.ObjectId(id);
+        })
+        
+        const products = await db
+          .getDb()
+          .collection('products')
+          .find({ _id: { $in: productIds } })
+          .toArray();
+    
+        return products.map(function (productDocument) {
+          return new Product(productDocument);
         });
     }
 
@@ -71,6 +88,11 @@ class Product {
     replaceImage(newImage) {
         this.image = newImage;
         this.updateImageData();
+    }
+
+    remove(){
+        const productId = new mongodb.ObjectId(this.id)
+        return db.getDb().collection('products').deleteOne({_id: productId});
     }
 }
 
