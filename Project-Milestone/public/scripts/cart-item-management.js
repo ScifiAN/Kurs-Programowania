@@ -22,7 +22,7 @@ async function updateCartItem(event){
                 _csrf: csrfToken,
             }),
             headers:{
-                'Constent-Type': 'application/json'
+                'Content-Type': 'application/json'
             }
         });
     } catch (error){
@@ -35,7 +35,7 @@ async function updateCartItem(event){
         return;
     }
 
-    response = await response.json();
+    const responseData = await response.json();
 
     if (responseData.updatedCartData.updatedItemPrice ===0){
         form.parentElement.parentElement.remove();
