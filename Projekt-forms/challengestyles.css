@@ -1,0 +1,104 @@
+body {
+  background-color: rgb(210, 241, 247);
+  font-family: "Roboto", sans-serif;
+}
+
+section {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(24, 7, 34);
+  margin: 2rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  width: 40rem;
+  margin: 3rem auto;
+  background-color: rgb(225, 249, 252);
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  color: rgb(34, 43, 61);
+  display: block;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  font: inherit;
+  border: 1px solid rgb(174, 174, 174);
+  border-radius: 4px;
+  padding: 0.25rem;
+  color: rgb(55, 55, 55);
+}
+
+input:focus,
+textarea:focus {
+  background-color: rgb(196, 235, 240);
+  color: rgb(15, 7, 88);
+  border-color: rgb(25, 11, 146);
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  font: inherit;
+  background-color: rgb(25, 11, 146);
+  color: white;
+  border: 1px solid rgb(25, 11, 146);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: rgb(43, 28, 180);
+  border-color: rgb(43, 28, 180);
+}
+
+.reply {
+  display: flex;
+}
+
+.reply label {
+    margin: 0;
+}
+
+.reply input {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+#clear {
+  background-color: rgb(225, 249, 252);
+  color: rgb(24, 7, 34);
+}
+
+#clear:hover {
+  background-color: rgb(177, 238, 247);
+}
+
+#buttons {
+    text-align: right;
+}

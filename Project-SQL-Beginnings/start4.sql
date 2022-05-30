@@ -1,0 +1,1 @@
+INSERT INTO restaurants (name, address_id, type_id) VALUES ('La Mama', 2, 1)

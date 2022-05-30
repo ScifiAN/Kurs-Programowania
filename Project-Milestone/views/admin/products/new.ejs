@@ -1,0 +1,17 @@
+<%- include('../../includes/head', { pagetitle: 'Add new Products' }) %> 
+<link rel="stylesheet" href="/styles/forms.css">
+<script src="/scripts/image-preview.js" defer></script>
+</head>
+<body>
+    <%- include('../../includes/header') %>
+    <main>
+        <h1>Add new Products (Admin)</h1>
+        <%- include('../../includes/product-form', {submitPath: '/admin/products/', product: {
+            title: '',
+            summary: '',
+            price: '',
+            description: '',
+        },
+        imageRequired: true}) %>
+    </main>
+<%- include('../../includes/footer') %> 
