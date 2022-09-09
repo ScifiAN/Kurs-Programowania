@@ -1,3 +1,0 @@
-
-npm install --save styled-components  ---> styled components instal command
-npm audit fix --force  ---> fixing installed react modules(if you can't run it )
