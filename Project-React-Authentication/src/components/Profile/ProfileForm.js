@@ -23,6 +23,8 @@ const ProfileForm = () => {
       headers: {
         'Content-Type': 'application/json'
       }
+    }).then(res => {
+      //assumption: success
     })
   };
 
