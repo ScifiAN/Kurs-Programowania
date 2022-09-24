@@ -1,0 +1,16 @@
+<%- include('../../includes/head', { pagetitle: 'All Products' }) %> 
+<link rel="stylesheet" href="/styles/products.css">
+</head>
+<body>
+    <%- include('../../includes/header') %>
+    <main>
+        <h1>All Products</h1>
+        <ul id="product-grid">
+            <% for (const product of products) {%>
+                <li>
+                    <%- include('../../includes/product-item', {product: product}) %> 
+                </li>
+            <% } %>
+        </ul> 
+    </main>
+<%- include('../../includes/footer') %> 
